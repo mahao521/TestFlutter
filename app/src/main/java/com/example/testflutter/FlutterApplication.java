@@ -1,21 +1,13 @@
 package com.example.testflutter;
 
 import android.app.Application;
-import android.content.Intent;
-
-import com.idlefish.flutterboost.FlutterBoost;
-import com.idlefish.flutterboost.FlutterBoostDelegate;
-import com.idlefish.flutterboost.FlutterBoostRouteOptions;
-import com.idlefish.flutterboost.containers.FlutterBoostActivity;
-
-import io.flutter.embedding.android.FlutterActivityLaunchConfigs;
 
 public class FlutterApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        FlutterBoost.instance().setup(this, new FlutterBoostDelegate() {
+       /* FlutterBoost.instance().setup(this, new FlutterBoostDelegate() {
             @Override
             public void pushNativeRoute(FlutterBoostRouteOptions options) {
                 Intent intent = new Intent(FlutterBoost.instance().currentActivity()
@@ -35,7 +27,7 @@ public class FlutterApplication extends Application {
                 FlutterBoost.instance().currentActivity().startActivity(intent);
             }
         }, engine -> {
-        });
+        });*/
     }
 }
 
